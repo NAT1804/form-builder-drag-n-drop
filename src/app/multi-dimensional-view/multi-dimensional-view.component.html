@@ -1,0 +1,14 @@
+<ng-container *ngIf="isArray; else itemView">
+  <multi-dimensional-view
+    *ngFor="let item of value"
+    [value]="item"
+    [content]="content"
+    [stringify]="stringify"
+  ></multi-dimensional-view>
+</ng-container>
+<ng-template #itemView>
+  <polymorpheus-outlet
+    [content]="content || stringify(value)"
+    [context]="value"
+  ></polymorpheus-outlet>
+</ng-template>
