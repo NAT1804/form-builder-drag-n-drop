@@ -1,14 +1,18 @@
-<ng-container *ngIf="isArray; else itemView">
-  <multi-dimensional-view
-    *ngFor="let item of value"
-    [value]="item"
-    [content]="content"
-    [stringify]="stringify"
-  ></multi-dimensional-view>
+<!-- <ng-container *ngIf="isArray; else itemView"> -->
+<!-- <ng-container *ngIf="checkArray(value)"> -->
+  <ng-container *ngFor="let item of value">
+    <span>{{item.data}}</span>
+    <multi-dimensional-view
+      *ngIf="item.children; else itemView"
+      [value]="item.children"
+      [content]="content"
+      [stringify]="stringify"
+    ></multi-dimensional-view>
+    <ng-template #itemView>
+      <p>No child</p>
+      <!-- <polymorpheus-outlet
+        [content]="content || stringify(value)"
+        [context]="value"
+      ></polymorpheus-outlet> -->
+    </ng-template>
 </ng-container>
-<ng-template #itemView>
-  <polymorpheus-outlet
-    [content]="content || stringify(value)"
-    [context]="value"
-  ></polymorpheus-outlet>
-</ng-template>

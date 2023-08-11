@@ -24,6 +24,10 @@ export class MultiDimensionalViewComponent<T> implements OnInit {
     return Array.isArray(this.value);
   }
 
+  checkArray(value: any): boolean {
+    return Array.isArray(value);
+  }
+
   constructor() { }
 
   ngOnInit(): void {

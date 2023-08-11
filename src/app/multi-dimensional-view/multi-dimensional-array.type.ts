@@ -1,3 +1,4 @@
-export type MultidimensionalArray<T> =
-  | T
-  | ReadonlyArray<MultidimensionalArray<T>>
+export type MultidimensionalArray<T> = ReadonlyArray<{
+  data: T,
+  children?: MultidimensionalArray<T>
+}>
