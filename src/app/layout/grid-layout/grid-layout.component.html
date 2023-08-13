@@ -1,0 +1,32 @@
+<mat-toolbar color="primary" layout="fill">
+  <div>Responsive Grid Demo using Angular Material !!</div>
+</mat-toolbar>
+<!-- <mat-card>
+  <mat-card-content>
+    <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="6px">
+      <div></div>
+      <br />
+      <img
+        mat-card-image
+        src="https://lh5.googleusercontent.com/p/AF1QipN_aupGaqTiv5_xbfKTl2qZz0XAJlGMt0WucgkU=w319-h100-k-no"
+        alt="Photos of educba"
+      />
+    </div>
+  </mat-card-content>
+</mat-card> -->
+<!-- [cols]="mybreakpoint"
+  rowHeight="4:0.5" -->
+<mat-grid-list
+  cols="4"
+  rowHeight="4:1"
+  (window:resize)="handleSize($event)"
+>
+  <mat-grid-tile
+    *ngFor="let tile of tiles"
+    [colspan]="tile.cols"
+    [rowspan]="tile.rows"
+    [style.background]="tile.color"
+  >
+    {{ tile.text }}
+  </mat-grid-tile>
+</mat-grid-list>

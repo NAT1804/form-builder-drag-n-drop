@@ -5,16 +5,30 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MultiDimensionalViewComponent } from './multi-dimensional-view/multi-dimensional-view.component';
 import { PolymorpheusModule } from "@tinkoff/ng-polymorpheus";
+import { LayoutModule } from './layout/layout.module';
+import { NavComponent } from './nav/nav.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MultiDimensionalViewComponent
+    MultiDimensionalViewComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    PolymorpheusModule
+    PolymorpheusModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

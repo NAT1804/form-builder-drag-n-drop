@@ -10,6 +10,7 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
+          "changeDetection": "OnPush",
           "style": "scss"
         },
         "@schematics/angular:application": {
@@ -18,11 +19,15 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "afb",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "rxjs-compat",
+              "ngx-masonry"
+            ],
             "outputPath": "dist/form-builder-drag-n-drop",
             "index": "src/index.html",
             "main": "src/main.ts",

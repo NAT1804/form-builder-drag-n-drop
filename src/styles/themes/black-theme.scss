@@ -1,0 +1,17 @@
+@use '@angular/material' as mat;
+
+// Define a dark theme
+$afb-dark-primary: mat.define-palette(mat.$grey-palette, 700, 300, 900);
+$afb-dark-accent: mat.define-palette(mat.$blue-grey-palette, 400);
+$afb-dark-warn: mat.define-palette(mat.$red-palette, 500);
+
+$afb-black-theme: mat.define-dark-theme((
+  color: (
+    primary: $afb-dark-primary,
+    accent: $afb-dark-accent,
+    warn: $afb-dark-warn
+  ),
+  // Only include `typography` and `density` in the default dark theme.
+  typography: mat.define-typography-config(),
+  density: 0,
+));
