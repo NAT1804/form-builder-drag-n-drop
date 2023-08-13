@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MultidimensionalArray } from './multi-dimensional-view/multi-dimensional-array.type';
+import { MultidimensionalArray } from './modules/home/page/multi-dimensional-view/multi-dimensional-array.type';
 interface Service {
   readonly title: string;
   readonly price: number;

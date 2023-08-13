@@ -1,14 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-
-import { Tile } from '@data/models/tile.interface';
-
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Tile } from '@app/data/models/tile.interface';
 
 @Component({
-  selector: 'app-grid-layout',
-  templateUrl: './grid-layout.component.html',
-  styleUrls: ['./grid-layout.component.scss']
+  selector: 'afb-home-layout',
+  templateUrl: './home-layout.component.html',
+  styleUrls: ['./home-layout.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class GridLayoutComponent implements OnInit {
+export class HomeLayoutComponent implements OnInit {
+
   mybreakpoint!: number;
 
   tiles: Tile[] = [

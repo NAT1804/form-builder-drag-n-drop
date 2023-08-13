@@ -1,17 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MultiDimensionalViewComponent } from './multi-dimensional-view/multi-dimensional-view.component';
-import { GridLayoutComponent } from './layout/grid-layout/grid-layout.component';
+
+import { HomeLayoutComponent } from './layout/home-layout/home-layout.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: GridLayoutComponent
+    component: HomeLayoutComponent,
+    children: [
+      {
+        path: 'dashboard',
+        loadChildren: () => import('@modules/home/home.module').then(m => m.HomeModule)
+      }
+    ]
   },
-  {
-    path: 'tree',
-    component: MultiDimensionalViewComponent
-  }
 ];
 
 @NgModule({

@@ -1,4 +1,5 @@
 @use '@angular/material' as mat;
+@import './typography.scss';
 
 // Define a dark theme
 $afb-dark-primary: mat.define-palette(mat.$grey-palette, 700, 300, 900);
@@ -11,7 +12,6 @@ $afb-black-theme: mat.define-dark-theme((
     accent: $afb-dark-accent,
     warn: $afb-dark-warn
   ),
-  // Only include `typography` and `density` in the default dark theme.
-  typography: mat.define-typography-config(),
+  typography: $custom-typography,
   density: 0,
 ));

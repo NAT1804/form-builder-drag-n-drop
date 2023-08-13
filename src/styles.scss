@@ -1,5 +1,9 @@
 @use '@angular/material' as mat;
-// @import '~bootstrap/scss/bootstrap';
+
+// import tailwindcss
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @import '@angular/material/theming';
 
@@ -23,12 +27,14 @@ $custom-typography: mat.define-typography-config(
   // @include my-project-container-component-theme($theme);
 }
 
-.afb-light-theme {
-  @include mat.all-component-themes($afb-light-theme);
-  @include custom-components-theme($afb-light-theme);
-}
-
+// Default theme: dark theme
 .afb-dark-theme {
   @include mat.all-component-themes($afb-black-theme);
   @include custom-components-theme($afb-black-theme);
 }
+
+.afb-light-theme {
+  @include mat.all-component-colors($afb-light-theme);
+  @include custom-components-theme($afb-light-theme);
+}
+
