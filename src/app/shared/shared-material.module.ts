@@ -19,6 +19,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { LayoutModule } from '@angular/cdk/layout';
 
 const MATERIAL_MODULES = [
   MatButtonModule,
@@ -41,7 +42,8 @@ const MATERIAL_MODULES = [
   MatDatepickerModule,
   MatNativeDateModule,
   MatSidenavModule,
-  MatGridListModule
+  MatGridListModule,
+  LayoutModule
 ];
 
 @NgModule({

@@ -1,2 +1,44 @@
-<p>home-layout works!</p>
-<router-outlet></router-outlet>
+<!-- <p>
+  The current screen size is <strong>{{currentScreenSize}}</strong>
+</p> -->
+<!-- <mat-grid-list
+  cols="4"
+  rowHeight="4:1"
+  (window:resize)="handleSize($event)"
+>
+  <mat-grid-tile
+    *ngFor="let tile of tiles"
+    [colspan]="tile.cols"
+    [rowspan]="tile.rows"
+    [style.background]="tile.color"
+  >
+    {{ tile.text }}
+  </mat-grid-tile>
+</mat-grid-list> -->
+
+<!-- <mat-grid-list cols="12" rowHeight="1:1">
+  <mat-grid-tile [colspan]="12" [rowspan]="1">
+    <router-outlet name="Header"></router-outlet>
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="2" [rowspan]="5">
+    <router-outlet name="LSidebar"></router-outlet>
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="8" [rowspan]="5">
+    <router-outlet></router-outlet>
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="2" [rowspan]="5">
+    <router-outlet name="RSidebar"></router-outlet>
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="12" [rowspan]="1">
+    <router-outlet name="Footer"></router-outlet>
+  </mat-grid-tile>
+</mat-grid-list> -->
+
+<div [class]="'theme-wrapper ' + (currentTheme$ | async)">
+  <!-- <mat-toolbar color="primary">
+    Angular Form Builder
+    <mat-slide-toggle [checked]="isDarkTheme$ | async" (change)="toggleTheme($event)">Toggle Theme</mat-slide-toggle>
+  </mat-toolbar> -->
+  <app-nav></app-nav>
+  <router-outlet></router-outlet>
+</div>

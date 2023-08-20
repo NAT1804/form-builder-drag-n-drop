@@ -17,7 +17,7 @@ $custom-typography: mat.define-typography-config(
 
 @include mat.core();
 
-@import './styles/themes/black-theme.scss';
+@import './styles/themes/dark-theme.scss';
 @import './styles/themes/light-theme.scss';
 
 // @import 'app/modules/home/page/project-item/project-container.component.scss-theme.scss';
@@ -28,10 +28,8 @@ $custom-typography: mat.define-typography-config(
 }
 
 // Default theme: dark theme
-.afb-dark-theme {
-  @include mat.all-component-themes($afb-black-theme);
-  @include custom-components-theme($afb-black-theme);
-}
+@include mat.all-component-themes($afb-dark-theme);
+@include custom-components-theme($afb-dark-theme);
 
 .afb-light-theme {
   @include mat.all-component-colors($afb-light-theme);
