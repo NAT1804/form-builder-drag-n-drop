@@ -20,6 +20,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { LayoutModule } from '@angular/cdk/layout';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 const MATERIAL_MODULES = [
   MatButtonModule,
@@ -43,7 +44,8 @@ const MATERIAL_MODULES = [
   MatNativeDateModule,
   MatSidenavModule,
   MatGridListModule,
-  LayoutModule
+  LayoutModule,
+  DragDropModule,
 ];
 
 @NgModule({

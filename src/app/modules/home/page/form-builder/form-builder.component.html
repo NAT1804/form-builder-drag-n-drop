@@ -1,0 +1,13 @@
+<div class="example-container">
+  <h2>Form Builder</h2>
+
+  <div
+    cdkDropList
+    id="formBuilder"
+    #formBuilder="cdkDropList"
+    [cdkDropListData]="components"
+    class="example-list"
+    (cdkDropListDropped)="drop($event)">
+    <div class="example-box" *ngFor="let item of components" cdkDrag>{{item}}</div>
+  </div>
+</div>

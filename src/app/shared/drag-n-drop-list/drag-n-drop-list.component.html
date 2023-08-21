@@ -1,0 +1,20 @@
+<div class="example-container">
+  <h2>List Component</h2>
+
+  <div
+    cdkDropList
+    id="listComp"
+    #listComp="cdkDropList"
+    [cdkDropListData]="components"
+    [cdkDropListConnectedTo]="['formBuilder']"
+    class="example-list"
+    cdkDropListSortingDisabled
+    (cdkDropListDropped)="drop($event)"
+    (cdkDropListExited)="exit($event)"
+  >
+    <div class="example-box" *ngFor="let item of components" cdkDrag>
+      <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
+      {{ item }}
+    </div>
+  </div>
+</div>

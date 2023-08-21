@@ -39,6 +39,7 @@
     Angular Form Builder
     <mat-slide-toggle [checked]="isDarkTheme$ | async" (change)="toggleTheme($event)">Toggle Theme</mat-slide-toggle>
   </mat-toolbar> -->
-  <app-nav></app-nav>
-  <router-outlet></router-outlet>
+  <app-nav>
+    <router-outlet></router-outlet>
+  </app-nav>
 </div>
